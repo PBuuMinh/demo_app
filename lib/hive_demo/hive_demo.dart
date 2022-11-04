@@ -2,7 +2,6 @@ import 'dart:math';
 
 import 'package:demo_app/hive_demo/models/movie_model.dart';
 import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 import 'dart:developer' as devtools show log;
@@ -28,11 +27,15 @@ class _MyMovieListState extends State<MyMovieList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Hive Demo'),
+        title: const Text('My Movie List'),
         actions: [
           IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.clear),
+            onPressed: () {
+              if (moviesBox.isNotEmpty) {
+                moviesBox.clear();
+              }
+            },
+            icon: const Icon(Icons.clear_all_rounded),
           )
         ],
       ),
