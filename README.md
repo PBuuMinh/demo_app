@@ -1,6 +1,6 @@
 # demo_app
 
-A new Flutter project.
+A Flutter Demo project.
 
 ## Getting Started
 
